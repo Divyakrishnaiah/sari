@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/images/favicon.ico">
+    <title>Highlight Common Keywords</title>
+    <link rel="stylesheet" href="../static/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/css/robotofont.css">
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/mdb.css" rel="stylesheet">
+    <link href="../static/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Nav Bar Code Starts -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark coloured">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="/dashboard">SARI-TC TOOL</a>
+        </div>
+      </nav>
+    <!-- Nav Bar Code Ends -->
+    
+    <!-- Row Starts -->
+    <div class = "container mt-5" >
+        <h4 class="text-center py-4 theading">Compare Keywords</h4>
+        <form>
+            <div class = "row">
+                <div class="col m-1" style="background-color: #C5CAE9;">
+                    <label class="badge badge-info" style="font-size: 3vh; margin-top: 5px">Inclusion Syntax</label>
+                    <textarea onfocus="clearText('incSyx')" onblur="setText('incSyx','Enter Inclusion Syntax Here...')" name="incSyntax" id="incSyx" class="textareacommon" rows="20" cols="60" >
+                    </textarea>
+                </div>
+                <div class="col m-1" style="background-color: #C5CAE9;">
+                    <label class="badge badge-info" style="font-size: 3vh; margin-top: 5px">Exclusion Syntax</label>
+                    <textarea onfocus="clearText('exSyx')" onblur="setText('exSyx','Enter Exclusion Syntax Here...')" name="exSyntax" id="exSyx" class="textareacommon" rows="20" cols="60" >
+                    </textarea>
+                </div>
+            </div>
+            <div class= "row justify-content-center">
+                <div class="col col-sm-3">
+                    <div class="btn-group" role="group">
+                        <button type="button" name="compare" class="btn btn-primary" name="compare" id="compare">Compare</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                      </div>
+                </div>
+            </div>
+        </form>
+        <div class = "row" style="height: 500px">
+            <div class="col bg-info m-1">
+                <label class="badge badge-success" style="font-size: 3vh; margin-top: 5px">Result</label>
+                <textarea id="result" name="result" rows="2" class="textareacommon" style="width:100%"></textarea>
+            </div>
+        </div>
+    </div>
+    <!-- Row Ends -->
+
+
+    <!-- JS File Imports -->
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <script type="text/javascript" src="../static/js/popper.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../static/js/mdb.js"></script>
+    <script type="text/javascript" src="../static/js/main.js"></script>
+
+    <script type="text/javascript">    
+        var txtarea = document.getElementById("incSyx");
+        txtarea.selectionEnd = 0;
+        txtarea.innerHTML = "Enter Inclusion Syntax Here...";
+
+        var txtarea = document.getElementById("exSyx");
+        txtarea.selectionEnd = 0;
+        txtarea.innerHTML = "Enter Exclusion Syntax Here...";
+
+        function clearText(id) {
+            const idstr='textarea#'+id
+            if($(idstr).val() === "Enter Inclusion Syntax Here..." || $(idstr).val() === "Enter Exclusion Syntax Here...") {
+                $(idstr).val("");
+            }
+        }
+        function setText(id, message) {
+            const idstr='textarea#'+id
+            if($(idstr).val().length == 0) {
+                $(idstr).val(message);
+            }     
+        }
+    </script>
+    
+</body>
+</html>

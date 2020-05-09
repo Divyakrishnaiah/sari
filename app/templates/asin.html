@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing ASIN</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/images/favicon.ico">
+    <link rel="stylesheet" href="../static/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/css/robotofont.css">
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/mdb.css" rel="stylesheet">
+    <link href="../static/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Nav Bar Code Starts -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark coloured">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="/dashboard">SARI-TC TOOL</a>
+        </div>
+      </nav>
+    <!-- Nav Bar Code Ends -->
+
+    <!-- Row Starts -->
+    <div class = "container mt-5" >
+        <h4 class="text-center py-4 theading">Find Missing ASIN</h4>
+        <form>
+            <div class = "row">
+                <div class="col m-1 text-center" style="background-color: #C5CAE9;">
+                    <label class="badge badge-info" style="font-size: 3vh; margin-top: 5px">Document ASIN</label>
+                    <textarea onfocus="clearText('docAsin')" onblur="setText('docAsin','Enter Document Keywords Here...')" name="docAsin" id="docAsin" class="textareacommon" rows="20" cols="30" >
+                    </textarea>
+                </div>
+                <div class="col m-1 text-center" style="background-color: #C5CAE9;">
+                    <label class="badge badge-info" style="font-size: 3vh; margin-top: 5px">Model Studio ASIN</label>
+                    <textarea onfocus="clearText('msAsin')" onblur="setText('msAsin','Enter Model Studio Syntax Here...')" name="msAsin" id="msAsin" class="textareacommon" rows="20" cols="30" >
+                    </textarea>
+                </div>
+                <div class="col m-1 text-center" style="background-color: #C5CAE9;">
+                    <label class="badge badge-info" style="font-size: 3vh; margin-top: 5px">Missing ASIN</label>
+                    <textarea name="missres" id="missres" class="textareacommon" rows="20" cols="30" style='color: #FF0000'>
+                    </textarea>
+                </div>
+            </div>
+            <div class= "row justify-content-center">
+                <div class="col col-sm-3">
+                    <div class="btn-group" role="group">
+                        <button type="button" name="asinmissing" class="btn btn-primary" name="asinmissing" id="asinmissing">Find</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                      </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- JS File Imports -->
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <script type="text/javascript" src="../static/js/popper.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../static/js/mdb.js"></script>
+    <script type="text/javascript" src="../static/js/main.js"></script>
+
+    <script type="text/javascript">    
+        var txtarea = document.getElementById("docAsin");
+        txtarea.selectionEnd = 0;
+        txtarea.innerHTML = "Enter Document ASIN Here...";
+
+        var txtarea = document.getElementById("msAsin");
+        txtarea.selectionEnd = 0;
+        txtarea.innerHTML = "Enter Model Studio ASIN Here...";
+        
+        function clearText(id) {
+            const idstr='textarea#'+id
+            if($(idstr).val() === "Enter Document ASIN Here..." || $(idstr).val() === "Enter Model Studio ASIN Here...") {
+                $(idstr).val("");
+            }
+        }
+        function setText(id, message) {
+            const idstr='textarea#'+id
+            if($(idstr).val().length == 0) {
+                $(idstr).val(message);
+            }     
+        }
+    </script>
+</body>
+</html>

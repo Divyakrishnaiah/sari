@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool SELECTION Dashboard</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/images/favicon.ico">
+    <link rel="stylesheet" href="../static/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/css/robotofont.css">
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/mdb.css" rel="stylesheet">
+    <link href="../static/css/main.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Nav Bar Code Starts -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark coloured">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="/dashboard">SARI-TC TOOL</a>
+        </div>
+      </nav>
+    <!-- Nav Bar Code Ends -->
+
+    <!-- Card Row Code Starts -->
+    <h4 class="text-center py-4 theading mt-5">Tool Selection Dashboard</h4>
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card mdb-color text-center z-depth-2 h-100">
+                    <div class="card-body">
+                        <a href="/missingkeywords">
+                            <h3 class="text-uppercase font-weight-bold light-green-text mt-2 mb-3"><strong>Find Missing inclusion Keywords</strong></h3>
+                        </a>
+                        <p class="white-text mb-0">It tests if all the inclusion keywords given in the document are present in the Model studio syntax. A missing keyword is displayed in a seperate text box.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card mdb-color text-center z-depth-2 h-100">
+                    <div class="card-body">
+                        <a href="/commonkeywords">
+                            <h3 class="text-uppercase font-weight-bold yellow-text mt-2 mb-3"><strong>Highlight Common Keywords</strong></h3>
+                        </a>
+                        <p class="white-text mb-0">It Highlights the same keyword which is present in both Inclusion and Exclusion Syntax</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card mdb-color text-center z-depth-2 h-100">
+                    <div class="card-body">
+                        <a href="/syntax">
+                            <h3 class="text-uppercase font-weight-bold red-text mt-2 mb-3"><strong>Check Spaces in Syntax</strong></h3>
+                        </a>
+                        <p class="white-text mb-0">Highlights unnecessary spaces within syntax</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card mdb-color text-center z-depth-2 h-100">
+                    <div class="card-body">
+                        <a href="/asin">
+                            <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3"><strong>Highlight missing ASIN</strong></h3>
+                        </a>
+                        <p class="white-text mb-0">Display ASINs which is present in document and not in model studio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card mdb-color text-center z-depth-2 h-100">
+                    <div class="card-body">
+                        <a href="/spelling">
+                            <h3 class="text-uppercase font-weight-bold pink-text mt-2 mb-3"><strong>Check ATTRIBUTE spelling</strong></h3>
+                        </a>
+                        <p class="white-text mb-0">This will highlight if there is spelling error in the syntax</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card mdb-color text-center z-depth-2 h-100">
+                    <div class="card-body">
+                        <a href="/replacesyx">
+                            <h3 class="text-uppercase font-weight-bold mt-2 mb-3" style="color: #D29FEA"><strong>Replace Special Chars</strong></h3>
+                        </a>
+                        <p class="white-text mb-0">This will replace the special characters with .(dot) or .|</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <p style= "color :black"><b></b></p>
+
+        <button onclick="document.location = 'https://ssa-central.aka.amazon.com/ssa/tool/Rule-Writing-Instrument/view'">Rule Writing Instrument</button>
+        <br>
+        <br>
+      </div>
+    <!-- Card Row Code Ends -->
+
+    <!-- JS File Imports -->
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <script type="text/javascript" src="../static/js/popper.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../static/js/mdb.js"></script>
+</body>
+</html>

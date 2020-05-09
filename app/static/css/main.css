@@ -1,0 +1,16 @@
+.coloured {
+    background-color: #900C3F;
+}
+
+.theading {
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-size: 5vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.textareacommon {
+    font-family: monospace;
+    border: none;
+    border-radius: 10px;
+}

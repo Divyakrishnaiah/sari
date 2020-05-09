@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Syntax</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/images/favicon.ico">
+    <link rel="stylesheet" href="../static/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/css/robotofont.css">
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/mdb.css" rel="stylesheet">
+    <link href="../static/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Nav Bar Code Starts -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark coloured">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="/dashboard">Comparision Tool</a>
+        </div>
+      </nav>
+    <!-- Nav Bar Code Ends -->
+
+    <div class = "container mt-5" >
+        <h4 class="text-center py-2 theading">Replace Special Characters in Syntax</h4>
+        <form>
+            <div class = "row">
+                <div class="col m-1 bg-warning m-2" style="background-color: #C5CAE9;">
+                    <label class="badge badge-secondary" style="font-size: 3vh; margin-top: 5px">Syntax</label><br>
+                    <textarea onfocus="clearText('repSyx')" onblur="setText('repSyx','Enter Syntax Here...')" name="repSyx" id="repSyx" class="textareacommon" rows="15" style="width:100%" >
+                    </textarea>
+                </div>
+            </div>
+            <div class= "row justify-content-center">
+                <div class="col col-sm-4">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary" name="replacesyx" id="replacesyx">Replace</button>
+                        <button type="button" class="btn btn-secondary" name="createsyx" id="createsyx">Create</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                      </div>
+                </div>
+            </div>
+        </form>
+        <div class = "row" style="height: 300px;">
+            <div class="col bg-info m-1">
+                <label class="badge badge-success" style="font-size: 3vh; margin-top: 5px">Result</label>
+                <pre>
+                    <div id="repres" name="repres" rows="4" class="textareacommon" style="background-color:#FFFFFF;overflow-y: scroll;font-weight:bold;padding:10px;padding-bottom: 20px;"></div>
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS File Imports -->
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <script type="text/javascript" src="../static/js/popper.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../static/js/mdb.js"></script>
+    <script type="text/javascript" src="../static/js/main.js"></script>
+
+    <script type="text/javascript">    
+        var txtarea = document.getElementById("repSyx");
+        txtarea.selectionEnd = 0;
+        txtarea.innerHTML = "Enter Syntax Here...";
+        
+        function clearText(id) {
+            const idstr='textarea#'+id
+            if($(idstr).val() === "Enter Syntax Here...") {
+                $(idstr).val("");
+            }
+        }
+        function setText(id, message) {
+            const idstr='textarea#'+id
+            if($(idstr).val().length == 0) {
+                $(idstr).val(message);
+            }     
+        }
+    </script>
+</body>
+</html>
