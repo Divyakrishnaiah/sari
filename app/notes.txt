@@ -1,0 +1,2 @@
+if re.sub('[^a-zA-Z0-9]','',j).casefold() in re.sub('[^a-zA-Z0-9]','',i).casefold() or re.sub('[^a-zA-Z0-9]','',j).casefold() in re.sub('[^a-zA-Z0-9]','',i).casefold()+'s':
+  commonItems.append(j)
